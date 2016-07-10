@@ -483,7 +483,6 @@ let g:jsdoc_additional_descriptions = 1
 let g:jsdoc_access_descriptions = 1
 let g:jsdoc_underscore_private = 1
 let g:jsdoc_allow_shorthand = 1
-let g:localvimrc_name = [ '.vimrc' ]
 let g:tern_show_argument_hints = 'on_hold'
 let g:tern_show_signature_in_pum = 1
 
@@ -504,8 +503,6 @@ let g:startify_change_to_vcs_root = 0
 let g:startify_relative_path = 1
 let g:startify_bookmarks = [ '~/.config/nvim/init.vim', '~/.bashrc', '~/prjs' ]
 let g:startify_session_dir = '~/.config/nvim/sessions'
-
-let g:localvimrc_persistent = 1
 
 let g:easytags_async = 1
 let g:easytags_file = '~/.vimtags'
@@ -727,7 +724,6 @@ Plug 'dsawardekar/portkey'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
-Plug 'embear/vim-localvimrc'
 Plug 'flazz/vim-colorschemes'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'gregsexton/gitv'
@@ -796,7 +792,6 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-heroku'
 Plug 'tpope/vim-jdaddy', { 'for': 'json' }
 Plug 'tpope/vim-rbenv', { 'for': 'ruby' }
 Plug 'tpope/vim-repeat'
