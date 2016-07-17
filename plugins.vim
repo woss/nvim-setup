@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'eugen0329/vim-esearch'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-vinegar'
 
 function! DoRemote(arg)
   UpdateRemotePlugins
@@ -16,10 +17,14 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-surround'
 
 Plug 'mattn/emmet-vim'
 Plug 'tomtom/tcomment_vim'
-
+Plug 'michaeljsmith/vim-indent-object'
+" Plug 'svermeulen/vim-easyclip'
+Plug 'tpope/vim-repeat'
+Plug 'fatih/vim-go'
+Plug 'airblade/vim-gitgutter'
 call plug#end()

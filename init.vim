@@ -33,11 +33,9 @@ endif
 if !&sidescrolloff
   set sidescrolloff=5   " Show next 5 columns while side-scrolling.
 endif
+
 set display+=lastline
 set nostartofline       " Do not jump to first character with page commands.
-
-
-
 set autoindent
 set smartindent
 set smarttab
@@ -57,6 +55,8 @@ set smartcase           " ... unless the query has capital letters.
 set incsearch           " Incremental search.
 set gdefault            " Use 'g' flag by default with :s/foo/bar/.
 set magic               " Use 'magic' patterns (extended regular expressions).
+
+let g:netrw_liststyle=3
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -81,13 +81,8 @@ set background=dark
 let g:one_allow_italics = 1
 colorscheme one
 
-" Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
-
 filetype plugin on
 filetype indent on
-
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -105,6 +100,7 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+nnoremap <Leader>/ :NERDTree<CR>
 
 " Open file menu
 nnoremap <Leader>o :CtrlP<CR>
@@ -161,4 +157,17 @@ let g:airline_right_alt_sep = '|'
 let g:airline_theme='one'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:rooter_patterns = ['Rakefile', '.git/', 'package.json', 'bower.json']
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+au FileType go nmap <leader>rt <Plug>(go-run-tab)
+au FileType go nmap <Leader>rs <Plug>(go-run-split)
+au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
