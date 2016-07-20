@@ -53,15 +53,22 @@ set smartcase           " ... unless the query has capital letters.
 set incsearch           " Incremental search.
 set gdefault            " Use 'g' flag by default with :s/foo/bar/.
 set magic               " Use 'magic' patterns (extended regular expressions).
-
 let g:netrw_liststyle=3
-
 set background=dark
 let g:one_allow_italics = 1
 colorscheme one
 
 filetype plugin on
 filetype indent on
+
+
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -89,5 +96,5 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>f :CtrlPMRUFiles<CR>
 
 let g:airline_theme='one'
-let g:rooter_patterns = ['Rakefile', '.git/', 'package.json', 'bower.json']
+let g:rooter_patterns = ['Rakefile', '.git/', 'package.json', 'bower.json', '.hg']
 
