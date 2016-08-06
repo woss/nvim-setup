@@ -96,5 +96,5 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>f :CtrlPMRUFiles<CR>
 
 let g:airline_theme='one'
-let g:rooter_patterns = ['Rakefile', '.git/', 'package.json', 'bower.json', '.hg']
+let g:rooter_patterns = ['Rakefile', '.git/', 'package.json', 'bower.json', '.hg/']
 
